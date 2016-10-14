@@ -1,0 +1,53 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+
+$bd-purple-1:         #563d7c;
+$bd-purple-2:         #808000;
+$bd-purple-3:         #8f98c3;
+$bd-purple-4:         #7C84AB;
+$bd-purple:         #63698A;
+$bd-purple-bright:  lighten(saturate($bd-purple, 5%), 15%);
+$bd-purple-light:   #cdbfe3;
+$bd-graphite:       #2a2730;
+$bd-graphite-light: lighten($bd-graphite, 40%);
+$bd-yellow:         #ffe484;
+$bd-danger:         #d9534f;
+$bd-warning:        #f0ad4e;
+$bd-info:           #5bc0de;
+$bb-link:           darken(slateblue, 10%);
+$bb-link-hover:     slateblue;
+
+@import "skiplink";
+@import "banner";
+@import "nav";
+@import "brand";
+@import "masthead";
+@import "content";
+@import "page-header";
+@import "sidebar";
+@import "footer";
+@import "banner-image";
+@import "font-awesome";
+@import "font-sizes";
+@import "font-family";
+@import "sticky-footer";
+@import "browser-bugs";
+@import "colours";
+@import "lists";
+@import "headings";
+@import "navigator";
+@import "help-text";
+@import "broadcast";
+@import "directives";

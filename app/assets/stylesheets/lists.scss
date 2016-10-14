@@ -1,0 +1,35 @@
+ul {
+  list-style-type: none;
+  padding-left:0;
+}
+
+ul.indented {
+  padding-left: 3rem;
+}
+
+ul.small-indent {
+  padding-left: 2rem;
+}
+
+li {
+  margin: 10px 0;
+}
+
+li.compact {
+  margin: 0;
+}
+
+ul.taxonomy-results li {
+  margin: 10px 0;
+}
+
+ul.circles {
+  list-style-type: circle;
+}
+
+ul.discs {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+

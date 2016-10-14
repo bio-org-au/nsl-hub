@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= yield :page_title %></title>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.png', :rel => 'shortcut icon' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+</head>
+
+<body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+  <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container-fluid">
+      <span class="skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+  <a id="top"></a>
+
+  <header class="navbar navbar-light navbar-static-top bd-navbar">
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+        &#9776;
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="/">
+        APNI/APC
+      </a>
+    </div>
+    <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+      <%= render 'layouts/nav_links' %>
+    </div>
+  </header>
+
+<div id="wrapper">
+  <div id="header" class="boa-pageheader <%= @zone %>">
+    <div class="container-fluid print">
+      <div class="left-page-edge-padding md-12 bd-content">
+        <%= yield :page_banner %>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container-fluid">
+
+      <% if @system_broadcast.present? && !@system_broadcast.match(/This is the test instance./) %> 
+        <div class="row">
+          <div class="col-xs-12 bd-content">
+            <div id="broadcast">
+              <%= @system_broadcast %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="no-left-padding col-md-3 col-xl-2 bd-sidebar">
+          <div class="left-page-edge-sidebar-padding bd-sidebar hidden-print">
+            <%= yield :sidebar %>
+            <%= yield :slider %>
+          </div>
+        </div>
+        
+        <div class="col-md-9 bd-content">
+          <%= yield %>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer" class="boa-footer text-muted hidden-print" role="contentinfo">
+    <div class="container-fluid">
+      <ul class="boa-footer-links">
+        <li>
+           <%= link_to "#{ fa_icon('chevron-left')} Back".html_safe, 'javascript:history.go(-1);', title: "Go back 1 page" %>
+        </li>
+        <li><a href="https://github.com/bio-org-au">GitHub</a></li>
+        <li><a href="https://twitter.com/AuBiodiversity">Twitter</a></li>
+      </ul>
+      <p>Designed and built at the 
+      <%= link_to("Australian National Botanic Gardens (ANBG)", "http://www.anbg.gov.au", title: "Australian National Botanic Gardens web page") %>.
+      </p>
+      <br/>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
