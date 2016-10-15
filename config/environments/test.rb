@@ -40,3 +40,6 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+# Rails.application.config.plants_url = "http://localhost:3000/" 
+# Rails.application.config.mosses_url = "http://localhost:3001/" 

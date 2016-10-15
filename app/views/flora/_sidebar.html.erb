@@ -32,13 +32,13 @@
           </li>
           <li class="">
             <%= link_to "Mosses",
-                        "http://localhost:3001/",
+                        "#{Rails.application.config.mosses_search_url}",
                         class: "",
                         title: "Mosses" %>
           </li>
           <li class="">
             <%= link_to "Vascular&nbsp;Plants".html_safe,
-                        "http://localhost:3000/",
+                        "#{Rails.application.config.plants_search_url}",
                         class: "",
                         title: "Vascular Plants" %>
           </li>
