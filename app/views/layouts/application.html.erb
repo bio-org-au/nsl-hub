@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title><%= yield :page_title %></title>
+  <title>
+    <% if Rails.configuration.try('display_as_test') == true %>
+      Test
+    <% elsif Rails.env.match(/development/) %>
+      Dev
+    <% end %>
+    <%= yield :page_title %>
+  </title>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png', :rel => 'shortcut icon' %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
