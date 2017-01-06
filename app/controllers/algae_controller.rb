@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+
+# Algae requests handled here.
 class AlgaeController < ApplicationController
   private
 

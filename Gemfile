@@ -1,5 +1,5 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
@@ -14,19 +14,17 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use postgresql as the database for Active Record
 platform :mri do
-  gem "pg", "~> 0.18"
+  gem 'pg', '~> 0.18'
 end
 
 platform :jruby do
-  gem "activerecord-jdbcpostgresql-adapter"
-  gem "therubyrhino"
-  gem "warbler"
+  gem 'activerecord-jdbcpostgresql-adapter'
+  gem 'therubyrhino'
+  gem 'warbler'
   gem 'puma', '~> 3.0'
 end
 
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -43,19 +41,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' anywhere in code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
-  gem "binding_of_caller", platforms: [:mri_19, :mri_20, :mri_21, :rbx]
+  gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the
+  # background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

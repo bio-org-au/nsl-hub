@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+
+# Mosses requests handled here.
 class MossesController < ApplicationController
   private
 

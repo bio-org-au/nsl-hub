@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+
+# Plants requests handled here.
 class PlantsController < ApplicationController
   private
 
