@@ -29,6 +29,10 @@ $bd-info:           #5bc0de;
 $bb-link:           darken(slateblue, 10%);
 $bb-link-hover:     slateblue;
 
+$development-color: #fff2e6;
+$test-color: #f3e6ff;
+$staging-color: #e6f2ff;
+
 @import "skiplink";
 @import "banner";
 @import "nav";
@@ -51,3 +55,4 @@ $bb-link-hover:     slateblue;
 @import "help-text";
 @import "broadcast";
 @import "directives";
+@import "environment";

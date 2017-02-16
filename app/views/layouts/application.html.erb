@@ -2,12 +2,7 @@
 <html lang="en">
 <head>
   <title>
-    <% if Rails.configuration.try('display_as_test') == true %>
-      Test
-    <% elsif Rails.env.match(/development/) %>
-      Dev
-    <% end %>
-    <%= yield :page_title %>
+    <%= env_tag %>&nbsp;<%= yield :page_title %>
   </title>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png', :rel => 'shortcut icon' %>
@@ -17,7 +12,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 </head>
 
-<body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+<body class="bd-docs <%= Rails.configuration.try('environment') %>" data-spy="scroll" data-target=".bd-sidenav-active" >
   <a id="skippy" class="sr-only sr-only-focusable" href="#content">
     <div class="container-fluid">
       <span class="skiplink-text">Skip to main content</span>
@@ -91,6 +86,7 @@
       <%= link_to("Australian National Botanic Gardens (ANBG)", "http://www.anbg.gov.au", title: "Australian National Botanic Gardens web page") %>.
       </p>
       <br/>
+      <%= env_tag %>
     </div>
   </div>
 </div>
