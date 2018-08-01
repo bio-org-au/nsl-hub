@@ -9,15 +9,15 @@ module ApplicationHelper
   def env_tag
     case Rails.configuration.try('environment')
     when /^dev/i
-      "Dev"
+      'Dev'
     when /^test/i
-      "Test"
+      'Test'
     when /^stag/i
-      "Staging"
+      'Staging'
     when /^prod/i
-      ""
+      ''
     else
-      "Unknown"
+      'Unknown'
     end
   end
 end
