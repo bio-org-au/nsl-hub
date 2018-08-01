@@ -41,7 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem "puma", platforms: [:jruby]
+  gem 'puma', platforms: [:jruby]
   # Call 'byebug' anywhere in code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
   gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
