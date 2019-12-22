@@ -2,7 +2,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.11.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -18,7 +18,7 @@ platform :mri do
 end
 
 platform :jruby do
-  gem 'activerecord-jdbcpostgresql-adapter'
+  gem "activerecord-jdbcpostgresql-adapter", "1.3.24"
   gem 'therubyrhino'
   gem 'jruby-jars', '9.1.5.0'
   gem 'warbler'
@@ -41,7 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem 'puma', platforms: [:jruby]
+  gem "puma", ">= 3.12.2", platforms: [:jruby]
   # Call 'byebug' anywhere in code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
   gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
@@ -59,7 +59,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'font-awesome-rails'
 
-gem 'bootstrap', '~> 4.0.0.alpha3.1' # Use Bootstrap 4.
 source 'http://insecure.rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.1'
 end
+
+gem "rack", ">= 1.6.12"
+gem "loofah", ">= 2.3.1"
+gem "bootstrap", ">= 4.3.1"
