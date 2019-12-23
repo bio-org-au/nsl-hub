@@ -41,7 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  gem "puma", ">= 3.12.2", platforms: [:jruby]
+  gem "puma", ">= 4.3.1", platforms: [:jruby]
   # Call 'byebug' anywhere in code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
   gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :mri_21, :rbx]
@@ -66,3 +66,4 @@ end
 gem "rack", ">= 1.6.12"
 gem "loofah", ">= 2.3.1"
 gem "bootstrap", ">= 4.3.1"
+gem "rubyzip", ">= 1.3.0"
