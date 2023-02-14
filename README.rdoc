@@ -1,5 +1,6 @@
 == README
 
+Archiving because no longer current (Feb 2023) GC
 
 * Ruby version
 
